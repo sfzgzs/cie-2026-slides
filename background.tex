@@ -7,14 +7,6 @@
             \pause\item $f$ is  \textbf{\textcolor{brown}{effectively locally uniformly continuous w.r.t.\null{} $X$}}.
         \end{enumerate}
     \end{definition}
-    % \vspace{-1.2em}
-    \note[item]{First, let's start with defining acceptability formally.
-    A function is called acceptable if its domain has an effective open exhaustion,
-    and is effectively locally uniformly continuous with respect to that open
-    exhaustion. Now, what are effective open exhaustions?
-    and what does it mean for a function to be effectively locally uniformly
-    continuous with respect to an effective open exhaustion?
-    We will now define the concepts introduced here.}
 \end{frame}
 \begin{frame}{Background -- Effective Open Exhaustions}
 \vspace{-1em}
@@ -44,17 +36,6 @@
         The notion of effective open exhaustions is equivalent to the notion of \textbf{\textcolor{Sepia}{recursively enumerable (r.e./c.e) open sets \citep{Weihrauch2000}}}.
     \end{itemize}
    
-    \note[item]{What is an effective open exhaustion? 
-    First of all, it's defined for open sets, so only open sets can have
-    open exhaustions.}
-    \note[item]{An open exhaustion is a sequence of open sets that all unioned
-    together should give us the original open set.}
-    \note[item]{each element of the sequence, $U_l$,is called a stage,
-    and is a union of a bunch of open intervals, the closures of which are disjoint.}
-    \note[item]{the closure of each stage falls under the next stage}
-    \note[item]{In each stage, the intervals are ordered and the endpoints are rational.}
-    \note[item]{And the reason we call these effective is becuase the map delivering the endpoints of intervals in a stage should be recursive.}
-    \note[item]{Now, as an example for an effective open exhaustion, consider the sequence here. In this example, each stage consists of a single interval and the union of all these sets covers the entire $\Reals$.}
 \end{frame}
 \begin{frame}{Background -- Effective Local Uniform Continuity}
     \pause
@@ -64,7 +45,4 @@
         \abs{x-y}<2^{-M(k,l)} \then \abs{f(x)-f(y)}<2^{-k}
         \]    
     \end{definition}
-    \note[item]{Now, we also needed effective local uniform continuity with respect to an effective open exhaustion.
-    
-    This is basically defined as standard uniform continuity, but over each stage. Also we require that the modulus of continuity $M$ is computable. This technically lets us compute bit by bit how close $y$ should be to $x$, to enable to compute $f(y)$ instead of $f(x)$ to get $k$-many correct bits.}
 \end{frame}
