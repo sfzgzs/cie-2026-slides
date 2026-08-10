@@ -1,0 +1,65 @@
+\begin{frame}{Contributions}
+    \vspace{-1em}
+    % \begin{exampleblock}
+    {\color{gray}
+    \textcolor{OliveGreen}{\textbf{Recall: Equivalence Theorem}, \citep{ModelOfCompForPartFunc_MingQuanFuAndJeffZucker}}\\
+    For any \textcolor{violet}{acceptable function} $f:\Reals\to\Reals$ and any {effective open exhaustion} $X$ for $\dom(f)$, the following are equivalent:}
+
+    \kern-1ex
+        \begin{itemize}
+            \setlength\itemsep{-3pt}\color{gray}
+            \item $f$ is an $\alpha$-computable function.
+            \item $f$ is \textcolor{BrickRed}{\WhileCC-approximable}.
+            \item $f$ is GL-computable w.r.t. $X$.
+            \item $f$ is effectively locally uniformly multipolynomially approximable w.r.t. $X$.
+        \end{itemize}
+        
+    % \end{exampleblock}
+    \pause 
+    \begin{ntheorem}[\WhileCC-approximability Theorem](1)
+        All elementary functions are \WhileCC-approximable.
+    \end{ntheorem}
+    \kern1ex
+    \pause
+    \begin{ntheorem}[Acceptability Theorem](2)
+        All elementary functions are acceptable.
+    \end{ntheorem}
+
+    \kern1ex
+
+    \note[item]{In order to list the contributions, let us first recall the equivalence theorem by Fu and Zucker that we mentioned earlier. This theorem says that for any acceptable function, it's either computable in all of the computability models below, or is computable in none of them.}
+    \note[item]{The second model of computability we listed here is an abstract model of computation on the reals. It is a simple while programming language featuring basic real operations, along with a countable choice operator that can choose natural numbers that satisfy a predicate. The CC in \WhileCC{} stands for countable choice. \WhileCC-approximability of a function basically means that we can write a program in \WhileCC{} that approximates that function arbitrarily close to the actual value.}
+    \note[item]{Our work could be summarized in two theorems. The first theorem states that all elementary functions are computable in this \WhileCC-approximation model.}
+    \note[item]{The second theorem uses the first one to prove that all elementary functions are acceptable.}
+\end{frame}
+\begin{frame}{Contributions}
+    \vspace{-1em}
+    {\color{gray}
+    \textcolor{OliveGreen}{\textbf{Recall: Equivalence Theorem}, \citep{ModelOfCompForPartFunc_MingQuanFuAndJeffZucker}}\\
+    For any {acceptable function} $f:\Reals\to\Reals$ and any {effective open exhaustion} $X$ for $\dom(f)$, the following are equivalent:}
+
+    \kern-1ex
+        \begin{itemize}
+            \setlength\itemsep{-3pt}\color{gray}
+            \item $f$ is an $\alpha$-computable function.
+            \item $f$ is \WhileCC-approximable.
+            \item $f$ is GL-computable w.r.t. $X$.
+            \item $f$ is effectively locally uniformly multipolynomially approximable w.r.t. $X$.
+        \end{itemize}
+
+    \kern1ex
+    \begin{ntheorem}[\WhileCC-approximability Theorem](1)
+        All elementary functions are \WhileCC-approximable.
+    \end{ntheorem}
+
+    \kern0.5ex
+    \begin{ntheorem}[Acceptability Theorem: Part 1](2.1)
+        The domain of any elementary function has an effective open exhaustion.
+    \end{ntheorem}
+    
+    \kern0.1ex
+    \begin{ntheorem}[Acceptability Theorem: Part 2](2.2)
+        Any elementary function is {effectively locally uniformly continuous} w.r.t.\null{} an effective open exhaustion for its domain.
+    \end{ntheorem}
+    \note[item]{Now this second theorem itself can be divided into two theorems based on the definition of acceptability. The first one states that for each elementary function, the domain has an effective open exhaustion. And the second one states that any elementary function is effectively locally uniformly continuous with respect to its domain.}
+\end{frame}

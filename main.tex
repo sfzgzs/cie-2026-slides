@@ -1,0 +1,102 @@
+\documentclass[
+% handout, 
+aspectratio=169,
+notes,
+t]
+{beamer}
+% \setbeameroption{show notes on second screen=bottom} % Both
+\setbeameroption{hide notes}
+% \setbeamertemplate{note page}{\pagecolor{yellow!10}\insertnote}\usepackage{palatino}
+
+\setbeamercovered{transparent}
+\usepackage{tikz}
+\usetheme{CambridgeUS}
+% \usetheme{metropolis}
+\usecolortheme{dolphin}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[page number]
+\setbeamertemplate{headline}
+
+\usepackage{multicol}
+\usepackage{natbib}
+\usepackage{doi}
+\usepackage{hyperref}
+\hypersetup{colorlinks, allcolors=Blue}
+\usepackage[normalem]{ulem}
+\input{definitions}
+\usepackage{amsmath, mathtools}
+\usepackage{bbding}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{edcomms}
+\usepackage{wasysym}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+
+% \pgfplotsset{compat=1.18}
+
+\title{\WhileCC-approximability and Acceptability of Elementary Functions\\
+or\\ The story of the time I invented a different kind of Wheel}
+\author{Fateme Ghasemi \and Jeffery Zucker \and William F. Smyth\\
+ghases5@mcmaster.ca \and zucker@mcmaster.ca \and smyth@mcmaster.ca\\
+}
+\date{CiE 2026\\
+Trier University\\
+July 27th - 31st, 2027}
+\vspace{-5em}
+\titlegraphic{\includegraphics[width=2cm]{mcmaster-logo.png}
+}
+\usefonttheme[onlymath]{serif}
+\usepackage{etoolbox}
+\setbeamertemplate{theorem begin}[normal font]
+
+\let\originalnewtheorem\newtheorem
+\RenewDocumentCommand{\newtheorem}{ommo}{%
+  \originalnewtheorem{#2inner}{#3\thisthmnumber}
+  \NewDocumentEnvironment{#2}{od()}
+   {%
+    \IfValueT{##2}{\renewcommand{\thisthmnumber}{ ##2}}%
+    \IfValueTF{##1}{\begin{#2inner}[##1]}{\begin{#2inner}}%
+   }
+   {\end{#2inner}}
+}
+\newcommand{\thisthmnumber}{}
+\newtheorem{ntheorem}{Theorem}
+
+\begin{document}
+
+\small
+\maketitle
+\begin{frame}
+    \begin{center}
+        In loving memory of Prof. Jeff Zucker\\
+        \vspace{1.5 cm}
+        \includegraphics[width=3cm]{Jeff.jpg}
+    \end{center}
+\end{frame}
+\section{Overview}
+    \input{overview.tex}
+\section{Introduction}
+    % \input{abstract-vs-concrete}
+    \input{total-and-partial}
+    % \input{problem}
+\section{Background}
+    % \input{whilecc}
+    \input{background}
+\section{Problem}
+    \input{elementary-functions}
+\section{Contributions}
+    \input{contribution-list}
+    \input{contribution1}
+    \input{Contribution1-wcc-appx}
+\section{Challenges}
+    % \input{challenges1}
+    % \input{challenges1-part1}
+    \input{challenges2}
+\section{Summary and Future Work}
+    \input{summary}
+    \input{alternative-approach}
+    \input{future-work}
+    \input{references}
+    \input{thanks}
+\end{document}
